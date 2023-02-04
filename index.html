@@ -1,0 +1,34 @@
+<html>
+    <head>
+<title>Form Submission of Students</title>
+    </head>
+    <body>
+      
+        Name:<br>
+          <input type="text" id="First_Name"><br>
+          District:<br>
+          <input type="text" id="District"><br>
+          Institute Code:<br>
+          <input type="text" id="Code"><br>
+          Teacher Approval:<br>
+          <input type="text" id="T_approval"><br>
+          Head Approval:<br>
+          <input type="text" id="H_approval"><br>
+
+          <button onclick="SubmitValues()">Submit</button>
+
+
+          <script type="text/javascript">
+          function SubmitValues(){
+            var First_Name = document.getElementById("First_Name").value;
+            var District = document.getElementById("District").value;
+            var Code = document.getElementById("Code").value;
+            var Teacher = document.getElementById("T_approval").value;
+            var Head = document.getElementById("H_approval").value;
+            window.external.setResult(First_Name + "," + District + "," + Code + ","+ Teacher + " "+ Head);
+            return true;
+          }
+            
+          </script>
+  </body>
+</html>
